@@ -1,166 +1,34 @@
-import {TypographyH1} from '@/components/ui/h1';
 import {TypographyP} from '@/components/ui/paragraph';
 import Image from 'next/image';
 import {FiUsers} from 'react-icons/fi';
 import {FaRegComment, FaRegNewspaper} from 'react-icons/fa6';
 import {MdShowChart} from 'react-icons/md';
 import {CiClock2, CiGlobe} from 'react-icons/ci';
-import FocusBox from '@/components/focusBox/focusBox';
 import {TypographyH2} from '@/components/ui/h2';
-import FocusBox2 from '@/components/focusBox2/focusBox2';
+import FocusBox2 from '@/components/focusBox2/FocusBox2';
 import {LuBadgeCheck} from 'react-icons/lu';
 import {TypographyH3} from '@/components/ui/h3';
 import {IoBookOutline} from 'react-icons/io5';
 import ServiceBox from './serviceBox';
-import SubscribeForm from '@/components/subscribeForm/subscribeForm';
+import { TypographyH5 } from '@/components/ui/h5';
+import HeroSection from './(sections)/HeroSection';
+import FocusSection from './(sections)/FocusSection';
+import AboutSection from './(sections)/AboutSection';
+
 
 export default function Home() {
     return (
-        <div>
-            <section className='max-w-282.5 mx-auto flex items-center mt-7.5 md:p-5 p-2.5'>
-                <div className='lg:flex-1 space-y-6'>
-                    <TypographyH1 className='text-primary lg:w-full md:w-4/6'>
-                        Read Blogs That Inspires Everyday Life
-                    </TypographyH1>
+        <>
+            {/* Hero area */}
+            <HeroSection />
 
-                    <TypographyP className='text-text-color'>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomized words which
-                        don&apos;t look even slightly believable. If you are
-                        going to use a passage of Lorem Ipsum, you need to be
-                        sure there isn&apos;t anything embarrassing hidden in
-                        the middle of text.
-                    </TypographyP>
+            {/* Focus box section */}
+            <FocusSection />
 
-                    <SubscribeForm />
-                </div>
-                <div className='lg:flex-1 hidden lg:block'>
-                    <Image
-                        src='/images/home-hero-banner.png'
-                        width={509}
-                        height={399}
-                        alt='hero home page'
-                        className='w-full h-auto'
-                    />
-                </div>
-            </section>
-            <section className='bg-black-color p-8 mb-15'>
-                <div className='flex items-center max-w-282.5 mx-auto justify-between'>
-                    <div className='space-y-2'>
-                        <FocusBox
-                            icon={
-                                <FiUsers
-                                    className='text-natural-background'
-                                    size={31}
-                                />
-                            }
-                            title='15,000+'
-                            caption='Active Readers'
-                        />
-                    </div>
-                    <div className='space-y-2'>
-                        <FocusBox
-                            icon={
-                                <FaRegNewspaper
-                                    className='text-natural-background'
-                                    size={31}
-                                />
-                            }
-                            title='850+'
-                            caption='Published Articles'
-                        />
-                    </div>
-                    <div className='space-y-2'>
-                        <FocusBox
-                            icon={
-                                <MdShowChart
-                                    className='text-natural-background'
-                                    size={31}
-                                />
-                            }
-                            title='2.5M+'
-                            caption='Monthly Views'
-                        />
-                    </div>
-                    <div className='space-y-2'>
-                        <FocusBox
-                            icon={
-                                <CiGlobe
-                                    className='text-natural-background'
-                                    size={31}
-                                />
-                            }
-                            title='120+'
-                            caption='Countries Reached'
-                        />
-                    </div>
-                </div>
-            </section>
-            <section className='mb-15 max-w-282.5 mx-auto flex space-x-12.5 item'>
-                <Image
-                    src={'/images/home-page-about-image.jpg'}
-                    width={479.837}
-                    height={359.876}
-                    alt='home'
-                    className='shadow-md rounded-md flex-3/6'
-                />
-                <div className='space-y-10 flex-3/6'>
-                    <div className='space-y-3'>
-                        <TypographyH2 className='text-primary'>
-                            About LiteBlog
-                        </TypographyH2>
-                        <TypographyP className='text-text-color'>
-                            We&apos;re a passionate team of writers, creators,
-                            and storytellers dedicated to bringing you
-                            high-quality content that inspires, educates, and
-                            entertains. Our mission is to create a space where
-                            ideas flourish and voices are heard.
-                        </TypographyP>
-                    </div>
-                    <div className='space-y-12.5'>
-                        <TypographyP className='text-text-color'>
-                            Since our launch, we&apos;ve grown into a vibrant
-                            community of readers and contributors from around
-                            the world, sharing stories that matter and
-                            perspectives that challenge the status quo.
-                        </TypographyP>
+            {/* About us section */}
+            <AboutSection />
 
-                        <div className='flex justify-between max-w-5/6'>
-                            <FocusBox2
-                                icon={
-                                    <FiUsers
-                                        className='text-stone-800'
-                                        size={20}
-                                    />
-                                }
-                                label='10k+'
-                                caption='Readers'
-                            />
-                            <FocusBox2
-                                icon={
-                                    <LuBadgeCheck
-                                        className='text-stone-800'
-                                        size={20}
-                                    />
-                                }
-                                label='500+'
-                                caption='Articles'
-                            />
-                            <FocusBox2
-                                icon={
-                                    <MdShowChart
-                                        className='text-stone-800'
-                                        size={20}
-                                    />
-                                }
-                                label='50+'
-                                caption='Writers'
-                            />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/* Service section */}
             <section className='max-w-282.5 bg-[#f0f0f0] mx-auto p-10 rounded-lg mb-12.5 space-y-16.5'>
                 <div className='space-y-5 text-center'>
                     <TypographyH2 className='text-center text-primary'>
@@ -212,6 +80,24 @@ export default function Home() {
                     </ServiceBox>
                 </div>
             </section>
-        </div>
+
+            {/* Category section */}
+            <section className='max-w-282.5 mx-auto mb-15'>
+                <div>
+                    <TypographyH2 className='text-primary'>
+                    Explore Categories
+                </TypographyH2>
+                <TypographyP>
+                    Browse through our diverse range of topics and find content that interests you.
+                </TypographyP>
+                </div>
+                <div>
+                    <div className='w-80 h-63.75 flex flex-col items-center justify-center bg-red-300 rounded-md'>
+                        <TypographyH5>Technology</TypographyH5>
+                        <TypographyP>95 Articles</TypographyP>
+                    </div>
+                </div>
+            </section>
+        </>
     );
 }

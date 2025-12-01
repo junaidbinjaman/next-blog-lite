@@ -1,8 +1,8 @@
 import React from 'react';
-import {TypographyP} from '../ui/paragraph';
-import {TypographyH5} from '../ui/h5';
-import FooterNav from './footerNav';
-import SocialMediaIcons from '../socialMediaIcons/socialMediaIcons';
+import FooterNav from './FooterNav';
+import { TypographyH5 } from '@/components/ui/h5';
+import { TypographyP } from '@/components/ui/paragraph';
+import SocialMediaIcons from '@/components/socialMediaIcons/SocialMediaIcons';
 
 function Footer() {
     const quickLinksNav = [

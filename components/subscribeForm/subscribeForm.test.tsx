@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import SubscribeForm from './subscribeForm';
+import SubscribeForm from './SubscribeForm';
 import Provider from '@/app/provider';
 
 describe('Subscribe Form', () => {

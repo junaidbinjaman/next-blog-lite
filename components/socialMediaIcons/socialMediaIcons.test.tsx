@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import SocialMediaIcons from "./socialMediaIcons";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 describe('Social Media Icons', () => {
     beforeEach(() => {

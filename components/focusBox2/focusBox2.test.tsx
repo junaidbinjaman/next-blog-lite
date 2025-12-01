@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import FocusBox2 from './focusBox2';
+import FocusBox2 from './FocusBox2';
 import {FaFacebook} from 'react-icons/fa';
 
 describe('Focus Box 2', () => {

@@ -1,8 +1,8 @@
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import Link from 'next/link';
-import {TypographyH3} from '../ui/h3';
-import SocialMediaIcons from '../socialMediaIcons/socialMediaIcons';
-import MobileNav from './mobileNav';
+import MobileNav from './MobileNav';
+import { TypographyH3 } from '@/components/ui/h3';
+import SocialMediaIcons from '@/components/socialMediaIcons/SocialMediaIcons';
 
 function Header() {
     const nav = [

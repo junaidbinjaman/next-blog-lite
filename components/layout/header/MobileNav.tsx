@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import React, {useState} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {IoClose} from 'react-icons/io5';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import {TypographyH4} from '../ui/h4';
 import {TypographyP} from '../ui/paragraph';
 
