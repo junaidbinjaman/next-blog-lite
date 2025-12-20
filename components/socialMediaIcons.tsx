@@ -1,10 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import clsx from 'clsx';
 
-function SocialMediaIcons() {
+function SocialMediaIcons({className}: {className?: string}) {
     return (
-        <ul className='flex gap-7.5'>
+        <ul className={clsx(
+            'flex gap-7.5',
+            className
+        )}>
             <li>
                 <Link href='#'>
                     <Image

@@ -44,7 +44,7 @@ function Footer() {
     ];
     return (
         <div className='bg-[#101828] pt-12.5 pb-5'>
-            <div className='flex justify-between max-w-282.5 mx-auto'>
+            <div className='lg:flex justify-between max-w-282.5 mx-auto md:grid md:grid-cols-2 space-y-10 p-5'>
                 <div className='space-y-2'>
                     <TypographyH5 className='text-natural-background'>
                         LiteBlog
@@ -74,10 +74,10 @@ function Footer() {
                         Follow Us
                     </TypographyH5>
 
-                    <SocialMediaIcons />
+                    <SocialMediaIcons className='mt-5' />
                 </div>
             </div>
-            <div className='mt-17.5'>
+            <div className='lg:mt-17.5 md:mt-0 mt-3'>
                 <TypographyP className='text-[#99A1AF] text-base font-inter not-italic text-center'>
                     © 2025 LiteBlog. All rights reserved. Developed by All Next
                     Ver Team
