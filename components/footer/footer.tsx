@@ -2,7 +2,7 @@ import React from 'react';
 import {TypographyP} from '../ui/paragraph';
 import {TypographyH5} from '../ui/h5';
 import FooterNav from './footerNav';
-import SocialMediaIcons from '../socialMediaIcons';
+import SocialMediaIcons from '../socialMediaIcons/socialMediaIcons';
 
 function Footer() {
     const quickLinksNav = [

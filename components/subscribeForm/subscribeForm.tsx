@@ -17,8 +17,6 @@ function SubscribeForm() {
     const onSubmit: SubmitHandler<Inputs> = (data) =>
         mutation.mutate(data.email);
 
-    console.log(mutation.data);
-
     return (
         <div className='mt-12.5 mb-16'>
             <form

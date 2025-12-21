@@ -5,9 +5,9 @@ import {FiUsers} from 'react-icons/fi';
 import {FaRegComment, FaRegNewspaper} from 'react-icons/fa6';
 import {MdShowChart} from 'react-icons/md';
 import {CiClock2, CiGlobe} from 'react-icons/ci';
-import FocusBox from '@/components/focusBox';
+import FocusBox from '@/components/focusBox/focusBox';
 import {TypographyH2} from '@/components/ui/h2';
-import FocusBox2 from '@/components/focusBox2';
+import FocusBox2 from '@/components/focusBox2/focusBox2';
 import {LuBadgeCheck} from 'react-icons/lu';
 import {TypographyH3} from '@/components/ui/h3';
 import {IoBookOutline} from 'react-icons/io5';
@@ -26,14 +26,14 @@ export default function Home() {
                     <TypographyP className='text-text-color'>
                         There are many variations of passages of Lorem Ipsum
                         available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
+                        some form, by injected humour, or randomized words which
                         don&apos;t look even slightly believable. If you are
                         going to use a passage of Lorem Ipsum, you need to be
                         sure there isn&apos;t anything embarrassing hidden in
                         the middle of text.
                     </TypographyP>
 
-                    <SubscribeForm></SubscribeForm>
+                    <SubscribeForm />
                 </div>
                 <div className='lg:flex-1 hidden lg:block'>
                     <Image
@@ -41,6 +41,7 @@ export default function Home() {
                         width={509}
                         height={399}
                         alt='hero home page'
+                        className='w-full h-auto'
                     />
                 </div>
             </section>
@@ -184,26 +185,18 @@ export default function Home() {
                         industry professionals across various topics.
                     </ServiceBox>
                     <ServiceBox
-                        icon={
-                            <CiClock2
-                                size={23}
-                                className='text-stone-700'
-                            />
-                        }
+                        icon={<CiClock2 size={23} className='text-stone-700' />}
                         title='Daily Updates'
                     >
-                        Fresh content published daily to keep you informed and inspired with the latest insights and trends.
+                        Fresh content published daily to keep you informed and
+                        inspired with the latest insights and trends.
                     </ServiceBox>
                     <ServiceBox
-                        icon={
-                            <CiGlobe
-                                size={23}
-                                className='text-stone-700'
-                            />
-                        }
+                        icon={<CiGlobe size={23} className='text-stone-700' />}
                         title='Global Perspectives'
                     >
-                        Diverse voices from around the world sharing unique perspectives and cultural insights.
+                        Diverse voices from around the world sharing unique
+                        perspectives and cultural insights.
                     </ServiceBox>
                     <ServiceBox
                         icon={
@@ -214,7 +207,8 @@ export default function Home() {
                         }
                         title='Community Driven'
                     >
-                        Engage with authors and fellow readers through comments, discussions, and community events.
+                        Engage with authors and fellow readers through comments,
+                        discussions, and community events.
                     </ServiceBox>
                 </div>
             </section>

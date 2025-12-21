@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import {Caption} from './ui/caption';
-import {TypographyP} from './ui/paragraph';
+import {Caption} from '../ui/caption';
+import {TypographyP} from '../ui/paragraph';
 
 type FocusBox2Props = {
     label: string;

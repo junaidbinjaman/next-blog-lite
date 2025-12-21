@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
-import {TypographyH6} from './ui/h6';
-import {TypographyP} from './ui/paragraph';
+import {TypographyH6} from '../ui/h6';
+import {TypographyP} from '../ui/paragraph';
 import clsx from 'clsx';
 
 type FocusBoxProps = {
@@ -10,7 +10,7 @@ type FocusBoxProps = {
     colorCode?: string;
 }
 
-function FocusBox({title, caption, icon, colorCode = '#ffffff'}: FocusBoxProps) {
+function FocusBox({title, caption, icon}: FocusBoxProps) {
     return (
         <div>
             <div className='flex flex-col items-center space-y-2'>

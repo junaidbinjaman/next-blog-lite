@@ -1,7 +1,7 @@
 import Navbar from './navbar';
 import Link from 'next/link';
 import {TypographyH3} from '../ui/h3';
-import SocialMediaIcons from '../socialMediaIcons';
+import SocialMediaIcons from '../socialMediaIcons/socialMediaIcons';
 import MobileNav from './mobileNav';
 
 function Header() {
