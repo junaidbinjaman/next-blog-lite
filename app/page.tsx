@@ -11,8 +11,8 @@ import FocusBox2 from '@/components/focusBox2';
 import {LuBadgeCheck} from 'react-icons/lu';
 import {TypographyH3} from '@/components/ui/h3';
 import {IoBookOutline} from 'react-icons/io5';
-import {TypographyH5} from '@/components/ui/h5';
 import ServiceBox from './serviceBox';
+import SubscribeForm from '@/components/subscribeForm/subscribeForm';
 
 export default function Home() {
     return (
@@ -33,17 +33,7 @@ export default function Home() {
                         the middle of text.
                     </TypographyP>
 
-                    <form className='general-shadow rounded-[10] py-1 px-1 flex w-fit gap-3.75 mt-12.5 mb-16'>
-                        <input
-                            placeholder='Insert your email..'
-                            className='text-base not-italic font-normal outline-0 lg:w-75 md:w-70.5 pl-2'
-                        />
-                        <input
-                            type='submit'
-                            className='cursor-pointer font-semibold bg-accent text-natural-background py-2.5 px-7.5 rounded-[10px] active:scale-75 transition-all'
-                            value='Subscribe Now'
-                        />
-                    </form>
+                    <SubscribeForm></SubscribeForm>
                 </div>
                 <div className='lg:flex-1 hidden lg:block'>
                     <Image

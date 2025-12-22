@@ -27,19 +27,19 @@ function Footer() {
     const categoryNav = [
         {
             label: 'Lifestyle',
-            href: '/',
+            href: '/lifestyle',
         },
         {
             label: 'Technology',
-            href: '/',
+            href: '/technology',
         },
         {
             label: 'Travel',
-            href: '/',
+            href: '/travel',
         },
         {
             label: 'Design',
-            href: '/',
+            href: '/design',
         },
     ];
     return (

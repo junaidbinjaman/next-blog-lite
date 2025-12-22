@@ -8,6 +8,7 @@ type NavbarProps = {
     navItems: {
         label: string;
         href: string;
+        id: number
     }[];
     className?: string;
     isVertical?: boolean;
@@ -19,7 +20,7 @@ function Navbar({navItems, className, isVertical = false}: NavbarProps) {
         <div className={clsx(className)}>
             <ul className={clsx(isVertical ? 'space-y-3' : 'flex gap-10')}>
                 {navItems.map((el) => (
-                    <li key={el.href}>
+                    <li key={el.id}>
                         <Link
                             href={el.href}
                             className={clsx(
@@ -28,7 +29,6 @@ function Navbar({navItems, className, isVertical = false}: NavbarProps) {
                                     'underline underline-offset-5 decoration-2 decoration-stone-800'
                             )}
                         >
-                            {el.label}
                         </Link>
                     </li>
                 ))}

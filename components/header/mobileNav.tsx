@@ -12,22 +12,27 @@ function MobileNav({className}: {className?: string}) {
 
     const nav = [
         {
+            id: 1,
             label: 'Home',
             href: '/',
         },
         {
+            id: 2,
             label: 'About Us',
             href: '/about-us',
         },
         {
+            id: 3,
             label: 'Blogs',
             href: '/blogs',
         },
         {
+            id: 4,
             label: 'Writer',
             href: '/writer',
         },
         {
+            id: 5,
             label: 'Contact',
             href: '/contact',
         },
