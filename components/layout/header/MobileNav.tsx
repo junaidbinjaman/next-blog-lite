@@ -4,8 +4,8 @@ import React, {useState} from 'react';
 import {FaBars} from 'react-icons/fa';
 import {IoClose} from 'react-icons/io5';
 import Navbar from './Navbar';
-import {TypographyH4} from '../ui/h4';
-import {TypographyP} from '../ui/paragraph';
+import { TypographyH4 } from '@/components/ui/h4';
+import { TypographyP } from '@/components/ui/paragraph';
 
 function MobileNav({className}: {className?: string}) {
     const [isOpen, setIsOpen] = useState(false);

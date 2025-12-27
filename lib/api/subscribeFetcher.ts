@@ -1,5 +1,5 @@
 export const subscribe = async (email: string) => {
-    const res = await fetch('https://example.com/api/subscribe', {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/subscribe`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({email})
