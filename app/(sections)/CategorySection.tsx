@@ -1,11 +1,12 @@
 'use client';
 import CategoryBox, { CategoryBoxProps } from '@/components/categoryBox/CategoryBox';
+import Loader from '@/components/skeletonCard/BlogSkeleton';
+import CategorySkeleton from '@/components/skeletonCard/CategorySkeleton';
 import { Button } from '@/components/ui/button';
 import { TypographyH2 } from '@/components/ui/h2';
 import { TypographyP } from '@/components/ui/paragraph';
 import { useCategories } from '@/hooks/useCategories';
 import Link from 'next/link';
-import { ThreeDots } from 'react-loader-spinner';
 
 function CategorySection() {
     const { isLoading, data, error } = useCategories(6);
@@ -28,14 +29,7 @@ function CategorySection() {
 
             {isLoading ? (
                 <div className="flex justify-center">
-                    <ThreeDots
-                        visible
-                        height="80"
-                        width="80"
-                        color="#5c6ac4"
-                        radius="9"
-                        ariaLabel="three-dots-loading"
-                    />
+                    <CategorySkeleton />
                 </div>
             ) : (
                 <div className="grid grid-cols-3 gap-6 mx-auto">

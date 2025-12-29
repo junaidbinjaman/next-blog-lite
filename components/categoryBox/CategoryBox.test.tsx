@@ -6,7 +6,8 @@ describe('CategoryBox', () => {
     render(
       <CategoryBox
         title="Technology"
-        articlesText="95 Articles"
+        numOfArticles={98}
+        href='/example'
       />
     );
   });
@@ -17,14 +18,15 @@ describe('CategoryBox', () => {
   });
 
   it('should render article numbers correctly', () => {
-    expect(screen.getByText(/95 Articles/i)).toBeInTheDocument();
+    expect(screen.getByText(/98/i)).toBeInTheDocument();
   });
 
   it('should not render if title is missing', () => {
     render(
       <CategoryBox
         title=""
-        articlesText="95 Articles"
+        numOfArticles={95}
+        href='/'
       />
     );
 

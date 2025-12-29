@@ -4,6 +4,7 @@ import AboutSection from './(sections)/AboutSection';
 import ServiceSection from './(sections)/ServiceSection';
 import CategorySection from './(sections)/CategorySection';
 import BlogsSections from './(sections)/BlogsSections';
+import CategorySkeleton from '@/components/skeletonCard/CategorySkeleton';
 
 export default function Home() {
     return (
