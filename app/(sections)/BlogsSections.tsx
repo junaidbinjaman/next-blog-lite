@@ -5,6 +5,8 @@ import BlogBox, {BlogBoxProps} from '@/components/blogBox/BlogBox';
 import {useBlog} from '@/hooks/useBlog';
 import {TypographyP} from '@/components/ui/paragraph';
 import SkeletonCard from '@/components/skeletonCard/BlogSkeleton';
+import {Button} from '@/components/ui/button';
+import Link from 'next/link';
 
 function BlogsSections() {
     const {isLoading, isError, error, data} = useBlog(7);
@@ -42,7 +44,7 @@ function BlogsSections() {
                             readTime={featureBlog!.readTime}
                         />
 
-                        <div className='grid grid-cols-2 gap-8 mt-5'>
+                        <div className='grid grid-cols-2 gap-8 mt-5 items-stretch'>
                             {otherBlogs.map((blog: BlogBoxProps) => (
                                 <BlogBox
                                     key={blog.href}
@@ -58,6 +60,13 @@ function BlogsSections() {
                         </div>
                     </>
                 )}
+            </div>
+            <div className='flex items-center justify-center mt-10'>
+                <Link href='/blogs'>
+                    <Button className='active:scale-75'>
+                        Browse All Blogs
+                    </Button>
+                </Link>
             </div>
         </section>
     );

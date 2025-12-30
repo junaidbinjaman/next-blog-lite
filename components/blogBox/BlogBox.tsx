@@ -32,21 +32,19 @@ function BlogBox({
         title = 'Untitled';
     }
     return (
-        <article>
-            <div className='shadow-sm rounded-md overflow-hidden'>
+        <article className='h-full'>
+            <div className='shadow-sm rounded-md overflow-hidden flex flex-col h-full'>
                 <Link href={href}>
                     <div
                         data-testid='thumbnail'
                         style={{
                             backgroundImage: `url(${thumbnail})`,
                         }}
-                        className='flex-2 
+                        className='flex-none 
                         bg-cover 
                         bg-center
                         w-125 
                         h-63.75 
-                        rounded-tl-md 
-                        rounded-bl-md 
                         p-3 pr-5
                         transform transition-transform duration-300 ease-in-out
                         hover:scale-105
@@ -57,7 +55,7 @@ function BlogBox({
                         </TypographyP>
                     </div>
                 </Link>
-                <div className='flex-3 flex flex-col gap-5 justify-center p-6'>
+                <div className='flex-1 flex flex-col gap-5 justify-center p-6'>
                     <div>
                         <Link href={href}>
                             <TypographyH4 className='text-primary truncate w-101.25'>

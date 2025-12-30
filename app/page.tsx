@@ -4,7 +4,8 @@ import AboutSection from './(sections)/AboutSection';
 import ServiceSection from './(sections)/ServiceSection';
 import CategorySection from './(sections)/CategorySection';
 import BlogsSections from './(sections)/BlogsSections';
-import CategorySkeleton from '@/components/skeletonCard/CategorySkeleton';
+import CTASection from '@/components/CTASection/CTASection';
+import WriterSection from '@/app/(sections)/WriterSection';
 
 export default function Home() {
     return (
@@ -15,6 +16,8 @@ export default function Home() {
             <ServiceSection />
             <CategorySection />
             <BlogsSections />
+            <CTASection />
+            <WriterSection />
         </>
     );
 }

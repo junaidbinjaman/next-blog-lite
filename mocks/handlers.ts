@@ -32,7 +32,7 @@ export const handlers = [
         });
     }),
 
-    http.get(`http://localhost:3000/api/blogs`, ({request}) => {
+    http.get(`${process.env.NEXT_PUBLIC_API_URL}/blogs`, ({request}) => {
         const url = new URL(request.url);
         const limitParam = url.searchParams.get('limit');
         const limit = limitParam ? parseInt(limitParam) : undefined;
@@ -47,4 +47,19 @@ export const handlers = [
             data: blogs
         });
     }),
+
+    http.get(`${process.env.NEXT_PUBLIC_API_URL}/writers`, ({request}) => { 
+        const url = new URL(request.url);
+        const limitParam = url.searchParams.get('limit');
+        const limit = limitParam ? parseInt(limitParam) : undefined;
+
+        const allWriters = data.writers;
+        const writers = allWriters.slice(0, limit);
+
+        return HttpResponse.json({
+            status: 'success',
+            message: 'Writers are retrieved successfully',
+            data: writers
+        });
+    })
 ];
