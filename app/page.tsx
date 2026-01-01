@@ -6,6 +6,7 @@ import CategorySection from './(sections)/CategorySection';
 import BlogsSections from './(sections)/BlogsSections';
 import CTASection from '@/components/CTASection/CTASection';
 import WriterSection from '@/app/(sections)/WriterSection';
+import TestimonialSection from './(sections)/TestimonialSection';
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
             <BlogsSections />
             <CTASection />
             <WriterSection />
+            <TestimonialSection />
         </>
     );
 }
