@@ -4,7 +4,7 @@ import FeatureBlogBox from '@/components/featureBlogBox/FeatureBlogBox';
 import BlogBox, {BlogBoxProps} from '@/components/blogBox/BlogBox';
 import {useBlog} from '@/hooks/useBlog';
 import {TypographyP} from '@/components/ui/paragraph';
-import SkeletonCard from '@/components/skeletonCard/BlogSkeleton';
+import SkeletonCard from '@/components/skeletons/BlogSkeleton';
 import {Button} from '@/components/ui/button';
 import Link from 'next/link';
 

@@ -1,7 +1,7 @@
 'use client';
 import CategoryBox, { CategoryBoxProps } from '@/components/categoryBox/CategoryBox';
-import Loader from '@/components/skeletonCard/BlogSkeleton';
-import CategorySkeleton from '@/components/skeletonCard/CategorySkeleton';
+import Loader from '@/components/skeletons/BlogSkeleton';
+import CategorySkeleton from '@/components/skeletons/CategorySkeleton';
 import { Button } from '@/components/ui/button';
 import { TypographyH2 } from '@/components/ui/h2';
 import { TypographyP } from '@/components/ui/paragraph';

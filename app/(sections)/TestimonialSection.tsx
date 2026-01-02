@@ -1,5 +1,6 @@
 'use client';
 import ReviewBox, {ReviewBoxProps} from '@/components/reviewBox/ReviewBox';
+import ReviewSkeleton from '@/components/skeletons/ReviewSkeleton';
 import {Button} from '@/components/ui/button';
 import {
     Carousel,
@@ -9,7 +10,7 @@ import {
 } from '@/components/ui/carousel';
 import {TypographyH2} from '@/components/ui/h2';
 import {TypographyP} from '@/components/ui/paragraph';
-import {useTestimonials} from '@/hooks/usetestimonials';
+import {useTestimonials} from '@/hooks/useTestimonials';
 import clsx from 'clsx';
 import {useEffect, useState} from 'react';
 
@@ -52,7 +53,7 @@ function TestimonialSection() {
                     their daily dose of inspiration.
                 </TypographyP>
             </div>
-            {isLoading && <p>Loading content..</p>}
+            {isLoading && <ReviewSkeleton repeat={3} />}
             {isError && (
                 <TypographyP className='text-red-500'>
                     Error: {error.message}
@@ -77,7 +78,6 @@ function TestimonialSection() {
                     </CarouselContent>
                 </Carousel>
             )}
-
             <div className='flex items-center justify-center gap-x-2.5 mt-2'>
                 {Array.from({length: snap}, (_, index) => (
                     <Button

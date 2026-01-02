@@ -1,174 +1,72 @@
-import {CheckIcon} from '@/components/icons/lucide-check';
-import {Button} from '@/components/ui/button';
-import {Caption} from '@/components/ui/caption';
+import PricingBox from '@/components/pricingBox/PricingBox';
 import {TypographyH2} from '@/components/ui/h2';
-import {TypographyH5} from '@/components/ui/h5';
 import {TypographyP} from '@/components/ui/paragraph';
-import React from 'react';
 
 function PricingSection() {
+    const freePricingFeatures = [
+        'Access to most articles',
+        'Weekly newsletter',
+        'Comment on posts',
+        'Mobile responsive',
+        'Basic search',
+    ];
+
+    const popularPricingFeatures = [
+        'Unlimited article access',
+        'Ad-free experience',
+        'Daily newsletter',
+        'Exclusive content',
+        'Early article access',
+        'Download articles',
+        'Priority support',
+    ];
+
+    const enterprisePricingFeatures = [
+        'Unlimited article access',
+        'Ad-free experience',
+        'Daily newsletter',
+        'Exclusive content',
+        'Early article access',
+        'Download articles',
+        'Priority support',
+    ];
     return (
-        <section className='mb-12.5 max-w-250 mx-auto'>
+        <section className='mb-12.5 max-w-250 mx-auto mt-20'>
             <TypographyH2 className='text-primary text-center'>
                 Simple, Transparent Pricing
             </TypographyH2>
-            <div className='grid grid-cols-3 space-x-4'>
-                <div className='p-8 shadow-sm rounded-lg flex flex-col gap-6.5'>
-                    <TypographyH5 className='text-primary'>Free</TypographyH5>
-                    <div>
-                        <TypographyP>$0/ forever</TypographyP>
-                        <TypographyP>Perfect for casual readers</TypographyP>
-                    </div>
-                    <Button variant='outline' className='w-full shadow-none py-6! bg-[#F3F4F6] hover:bg-[#F3F4F6]/40'>
-                        Get Started
-                    </Button>
-                    <div className='flex flex-col gap-y-3'>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Access to most articles</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Weekly newsletter</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Comment on posts</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Mobile responsive</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Basic search</TypographyP>
-                        </div>
-                    </div>
-                </div>
-                <div className='p-8 shadow-sm rounded-lg flex flex-col gap-6.5'>
-                    <TypographyH5 className='text-primary'>Free</TypographyH5>
-                    <div>
-                        <TypographyP>$0/ forever</TypographyP>
-                        <TypographyP>Perfect for casual readers</TypographyP>
-                    </div>
-                    <Button variant='outline' className='w-full shadow-none py-6! bg-[#F3F4F6] hover:bg-[#F3F4F6]/40'>
-                        Get Started
-                    </Button>
-                    <div className='flex flex-col gap-y-3'>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Access to most articles</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Weekly newsletter</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Comment on posts</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Mobile responsive</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Basic search</TypographyP>
-                        </div>
-                    </div>
-                </div>
-                <div className='p-8 shadow-sm rounded-lg flex flex-col gap-6.5'>
-                    <TypographyH5 className='text-primary'>Free</TypographyH5>
-                    <div>
-                        <TypographyP>$0/ forever</TypographyP>
-                        <TypographyP>Perfect for casual readers</TypographyP>
-                    </div>
-                    <Button variant='outline' className='w-full shadow-none py-6! bg-[#F3F4F6] hover:bg-[#F3F4F6]/40'>
-                        Get Started
-                    </Button>
-                    <div className='flex flex-col gap-y-3'>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Access to most articles</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Weekly newsletter</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Comment on posts</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Mobile responsive</TypographyP>
-                        </div>
-                        <div className='flex gap-3 items-center'>
-                            <CheckIcon
-                                className='text-accent'
-                                width={20}
-                                height={20}
-                            />
-                            <TypographyP>Basic search</TypographyP>
-                        </div>
-                    </div>
-                </div>
+            <TypographyP className='text-center'>
+                Choose the plan that works best for you. All plans include a
+                14-day free trial.
+            </TypographyP>
+            <div className='grid grid-cols-3 space-x-4 mt-11'>
+                <PricingBox
+                    price={0}
+                    title='Free'
+                    type='default'
+                    buttonTitle='Get Started'
+                    period='forever'
+                    shortDescription='Perfect for casual readers'
+                    features={freePricingFeatures}
+                />
+                <PricingBox
+                    price={9}
+                    title='Premium'
+                    type='popular'
+                    buttonTitle='Start Free Trial'
+                    period='month'
+                    shortDescription='Best for dedicated readers'
+                    features={popularPricingFeatures}
+                />
+                <PricingBox
+                    price={49}
+                    title='Enterprise'
+                    type='default'
+                    buttonTitle='Contact Sales'
+                    period='month'
+                    shortDescription='For teams and organizations'
+                    features={enterprisePricingFeatures}
+                />
             </div>
         </section>
     );

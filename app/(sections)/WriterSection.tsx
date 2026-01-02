@@ -3,7 +3,7 @@ import {useWriter} from '@/hooks/useWriter';
 import {TypographyH2} from '../../components/ui/h2';
 import {TypographyP} from '../../components/ui/paragraph';
 import WriterBox, {WriterBoxProps} from '../../components/writerBox/WriterBox';
-import WriterSkeleton from '@/components/skeletonCard/WriterSkeleton';
+import WriterSkeleton from '@/components/skeletons/WriterSkeleton';
 
 function WriterSection() {
     const {isLoading, isError, error, data} = useWriter(4);
