@@ -31,12 +31,18 @@ function PricingBox({
                 type === 'popular' ? 'shadow-lg! -mb-4' : ''
             )}
         >
-            {type === 'popular' && (
-                <TypographyP className='bg-primary rounded-full px-3 py-1 text-white w-fit'>
-                    Most Popular
-                </TypographyP>
-            )}
-            <TypographyH5 className='text-primary'>{title}</TypographyH5>
+            <div className='flex flex-col gap-2.5'>
+                {type === 'popular' && (
+                    <TypographyP className='bg-primary rounded-full px-3 py-1 text-white w-fit'>
+                        Most Popular
+                    </TypographyP>
+                )}
+                <TypographyH5
+                    className={clsx(type !== 'popular' && 'text-primary')}
+                >
+                    {title}
+                </TypographyH5>
+            </div>
             <div>
                 <TypographyP className='text-black'>
                     ${price}/ {period}
