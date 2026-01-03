@@ -61,5 +61,14 @@ export const handlers = [
             message: 'Writers are retrieved successfully',
             data: writers
         });
+    }),
+
+    http.get(`${process.env.NEXT_PUBLIC_API_URL}/testimonials`, () => {
+
+        return HttpResponse.json({
+            status: 'success',
+            message: 'Reviews are retrieves successfully',
+            data: data.testimonials
+        })
     })
 ];

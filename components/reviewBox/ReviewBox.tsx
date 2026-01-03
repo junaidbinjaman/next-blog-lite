@@ -4,11 +4,14 @@ import { StarOutlinedIcon } from '../icons/ant-design-star-outlined'
 import { TypographyP } from '../ui/paragraph'
 import { TypographyH5 } from '../ui/h5'
 
-type ReviewBoxProps = {
+export type ReviewBoxProps = {
     star: number;
+    description: string;
+    name: string;
+    designation: string;
 }
 
-function ReviewBox({star}: ReviewBoxProps) {
+function ReviewBox({star, description, name, designation}: ReviewBoxProps) {
     const emptyStar = 5 - star;
   return (
     <div className='shadow-md rounded-md p-5! bg-white space-y-7'>
@@ -19,6 +22,7 @@ function ReviewBox({star}: ReviewBoxProps) {
                                     key={index}
                                     size={23}
                                     className='text-[#FDC700]'
+                                    data-testid="rating-star"
                                 />
                             ))}
                             {Array.from({length: emptyStar}, (_, index) => (
@@ -29,17 +33,11 @@ function ReviewBox({star}: ReviewBoxProps) {
                                 />
                             ))}
                         </div>
-                        <TypographyP>
-                            LiteBlog has become my daily go-to for quality
-                            content. The diversity of topics and the quality of
-                            writing is outstanding.
-                        </TypographyP>
+                        <TypographyP>{description}</TypographyP>
                     </div>
                     <div>
-                        <TypographyH5 className='text-primary'>
-                            Sarah Johnson
-                        </TypographyH5>
-                        <TypographyP>Content Creator</TypographyP>
+                        <TypographyH5 className='text-primary'>{name}</TypographyH5>
+                        <TypographyP>{designation}</TypographyP>
                     </div>
                 </div>
   )

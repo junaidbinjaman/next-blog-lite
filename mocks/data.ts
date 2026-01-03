@@ -331,4 +331,76 @@ export const data = {
             linkedin: 'https://linkedin.com/in/anika-chowdhury',
         },
     ],
+    testimonials: [
+        {
+            star: 5,
+            description:
+                'Excellent service with great attention to detail. The final result was fast, clean, and user-friendly.',
+            name: 'Sarah Thompson',
+            designation: 'Marketing Manager',
+        },
+        {
+            star: 4,
+            description:
+                'Very professional and easy to work with. Communication was clear throughout the project.',
+            name: 'Michael Lee',
+            designation: 'Ecommerce Store Owner',
+        },
+        {
+            star: 5,
+            description:
+                'Strong WooCommerce expertise. The rebuild improved performance and overall user experience.',
+            name: 'Emily Carter',
+            designation: 'Startup Founder',
+        },
+        {
+            star: 5,
+            description:
+                'Delivered exactly what was promised. Clean structure and well-optimized setup.',
+            name: 'David Wilson',
+            designation: 'Product Manager',
+        },
+        {
+            star: 4,
+            description:
+                'Great understanding of business needs and technical execution.',
+            name: 'Olivia Martinez',
+            designation: 'UX Designer',
+        },
+        {
+            star: 5,
+            description:
+                'Very reliable developer with solid problem-solving skills. Highly recommended.',
+            name: 'James Anderson',
+            designation: 'Operations Lead',
+        },
+        {
+            star: 4,
+            description:
+                'Handled WooCommerce configuration smoothly and professionally.',
+            name: 'Sophia Brown',
+            designation: 'Small Business Owner',
+        },
+        {
+            star: 5,
+            description:
+                'Fast delivery, great quality, and excellent communication.',
+            name: 'Daniel Rodriguez',
+            designation: 'Tech Consultant',
+        },
+        {
+            star: 5,
+            description:
+                'The site rebuild was smooth and well-structured. Performance improved noticeably.',
+            name: 'Isabella Nguyen',
+            designation: 'Digital Strategist',
+        },
+        {
+            star: 4,
+            description:
+                'Professional approach and strong technical knowledge. Would work together again.',
+            name: 'Ethan Walker',
+            designation: 'Project Coordinator',
+        },
+    ],
 };

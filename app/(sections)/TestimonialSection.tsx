@@ -1,5 +1,5 @@
 'use client';
-import ReviewBox from '@/components/reviewBox/ReviewBox';
+import ReviewBox, {ReviewBoxProps} from '@/components/reviewBox/ReviewBox';
 import {Button} from '@/components/ui/button';
 import {
     Carousel,
@@ -9,12 +9,14 @@ import {
 } from '@/components/ui/carousel';
 import {TypographyH2} from '@/components/ui/h2';
 import {TypographyP} from '@/components/ui/paragraph';
+import {useTestimonials} from '@/hooks/usetestimonials';
 import clsx from 'clsx';
 import {useEffect, useState} from 'react';
 
 function TestimonialSection() {
     const [api, setApi] = useState<CarouselApi>();
     const [current, setCurrent] = useState(0);
+    const {data, isLoading, isError, error} = useTestimonials();
 
     useEffect(() => {
         if (!api) return;
@@ -50,40 +52,31 @@ function TestimonialSection() {
                     their daily dose of inspiration.
                 </TypographyP>
             </div>
-            <Carousel setApi={setApi}>
-                <CarouselContent className='mb-5'>
-                    {/* slide 1 */}
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    {/* slide 2 */}
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    {/* slide 3 */}
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                    <CarouselItem className='basis-1/3'>
-                        <ReviewBox star={3} />
-                    </CarouselItem>
-                </CarouselContent>
-            </Carousel>
+            {isLoading && <p>Loading content..</p>}
+            {isError && (
+                <TypographyP className='text-red-500'>
+                    Error: {error.message}
+                </TypographyP>
+            )}
+            {!isLoading && !isError && data.data.length < 1 && (
+                <p>No review submitted yet</p>
+            )}
+            {!isLoading && !isError && data.data.length > 0 && (
+                <Carousel setApi={setApi}>
+                    <CarouselContent className='mb-5'>
+                        {data.data.map((el: ReviewBoxProps, index: number) => (
+                            <CarouselItem key={index} className='basis-1/3'>
+                                <ReviewBox
+                                    star={el.star}
+                                    description={el.description}
+                                    name={el.name}
+                                    designation={el.designation}
+                                />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                </Carousel>
+            )}
 
             <div className='flex items-center justify-center gap-x-2.5 mt-2'>
                 {Array.from({length: snap}, (_, index) => (
