@@ -8,6 +8,9 @@ import CTASection from '@/components/CTASection/CTASection';
 import WriterSection from '@/app/(sections)/WriterSection';
 import TestimonialSection from './(sections)/TestimonialSection';
 import PricingSection from './(sections)/PricingSection';
+import FaqSection from './(sections)/(faqSection)/FaqSection';
+import BrandSection from './(sections)/BrandSection';
+import InstagramFeedSection from './(sections)/InstagramFeedSection';
 
 export default function Home() {
     return (
@@ -22,6 +25,9 @@ export default function Home() {
             <WriterSection />
             <TestimonialSection />
             <PricingSection />
+            <FaqSection />
+            <BrandSection />
+            <InstagramFeedSection />
         </>
     );
 }
