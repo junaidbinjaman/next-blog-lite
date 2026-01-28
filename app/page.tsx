@@ -11,6 +11,7 @@ import PricingSection from './(sections)/PricingSection';
 import FaqSection from './(sections)/(faqSection)/FaqSection';
 import BrandSection from './(sections)/BrandSection';
 import InstagramFeedSection from './(sections)/InstagramFeedSection';
+import ContactSection from './(sections)/ContactSection';
 
 export default function Home() {
     return (
@@ -28,6 +29,7 @@ export default function Home() {
             <FaqSection />
             <BrandSection />
             <InstagramFeedSection />
+            <ContactSection />
         </>
     );
 }
