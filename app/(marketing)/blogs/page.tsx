@@ -1,6 +1,6 @@
 import NewsLetterSubscriptionBox from '@/components/NewsLetterSubscriptionBox/NewsLetterSubscriptionBox';
 import BlogsSections from '@/components/sections/BlogsSections';
-import CategorySection from '@/components/sections/CategorySection';
+import CategorySection from './_components/CategorySection';
 
 function page() {
     return (
