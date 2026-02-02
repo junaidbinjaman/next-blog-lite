@@ -32,19 +32,33 @@ export const handlers = [
         });
     }),
 
-    http.get(`${process.env.NEXT_PUBLIC_API_URL}/blogs`, ({request}) => {
+    http.get(`${process.env.NEXT_PUBLIC_API_URL}/blogs`, ({request}) => {                      
         const url = new URL(request.url);
-        const limitParam = url.searchParams.get('limit');
-        const limit = limitParam ? parseInt(limitParam) : undefined;
+
+        const page = Number(url.searchParams.get('page') ?? 1);
+        const limit = Number(url.searchParams.get('limit') ?? 10);
 
         const allBlogs = data.blogs;
+        const totalItems = allBlogs.length;
+        const totalPages = Math.ceil(totalItems / limit);
 
-        const blogs = limit ? allBlogs.slice(0, limit) : allBlogs;
+        const start = (page - 1) * limit;
+        const end = start + limit;
+
+        const blogs = allBlogs.slice(start, end);
 
         return HttpResponse.json({
-            'status': 'success',
-            'message': 'Blogs are retrieved successfully',
-            data: blogs
+            status: 'success',
+            message: 'Blogs are retrieved successfully',
+            data: blogs,
+            meta: {
+                current_page: page,
+                per_page: limit,
+                total_items: totalItems,
+                total_pages: totalPages,
+                has_next: page < totalPages,
+                has_prev: page > 1
+            }
         });
     }),
 
