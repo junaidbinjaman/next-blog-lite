@@ -13,7 +13,7 @@ function WriterSection() {
     }
 
     return (
-        <section className='max-w-282.5 mx-auto mb-12.5'>
+        <section className='max-w-282.5 mx-auto mb-12.5 px-5'>
             <TypographyH2 className='text-center text-primary'>
                 Meet Our Writers
             </TypographyH2>
@@ -29,7 +29,7 @@ function WriterSection() {
                         Failed to load writers {error.message}
                     </TypographyP>
                 ) : (
-                    <div className='grid grid-cols-4 gap-x-7.5'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7.5'>
                         {data &&
                             data.data.map(
                                 (el: WriterBoxProps, index: number) => (

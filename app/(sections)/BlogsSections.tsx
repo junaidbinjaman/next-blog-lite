@@ -15,7 +15,7 @@ function BlogsSections() {
     const otherBlogs: BlogBoxProps[] = data?.data?.slice(1) || [];
 
     return (
-        <section className='max-w-250 mx-auto mb-15'>
+        <section className='max-w-250 mx-auto mb-15 p-5'>
             <TypographyH2 className='text-primary'>
                 Latest Articles
             </TypographyH2>
@@ -44,7 +44,7 @@ function BlogsSections() {
                             readTime={featureBlog!.readTime}
                         />
 
-                        <div className='grid grid-cols-2 gap-8 mt-5 items-stretch'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-5 items-stretch'>
                             {otherBlogs.map((blog: BlogBoxProps) => (
                                 <BlogBox
                                     key={blog.href}

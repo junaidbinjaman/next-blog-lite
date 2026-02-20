@@ -32,7 +32,7 @@ function FeatureBlogBox({
         title = 'Untitled';
     }
     return (
-        <div className='flex space-x-10 shadow-sm rounded-md overflow-hidden'>
+        <div className='flex flex-col md:flex-row space-x-10 shadow-sm rounded-md overflow-hidden'>
             <Link href={href}>
                 <div
                     data-testid='thumbnail'
@@ -45,7 +45,7 @@ function FeatureBlogBox({
                         w-125 
                         h-63.75 
                         rounded-tl-md 
-                        rounded-bl-md 
+                        md:rounded-bl-md 
                         p-3 pr-5
                         transform transition-transform duration-300 ease-in-out
                         hover:scale-105
@@ -56,7 +56,7 @@ function FeatureBlogBox({
                     </TypographyP>
                 </div>
             </Link>
-            <div className='flex-3 flex flex-col gap-5 justify-center'>
+            <div className='flex-3 flex flex-col gap-5 justify-center p-3'>
                 <div>
                     <Link href={href}>
                         <TypographyH4 className='text-primary'>

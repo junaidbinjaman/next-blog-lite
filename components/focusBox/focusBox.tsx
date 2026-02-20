@@ -23,7 +23,7 @@ function FocusBox({title, caption, icon}: FocusBoxProps) {
                 </TypographyH6>
             </div>
             <TypographyP className={clsx(
-                'text-base',
+                'text-base text-center',
                 `text-white`
             )}>
                 {caption}

@@ -9,7 +9,7 @@ import {MdShowChart} from 'react-icons/md';
 
 function AboutSection() {
     return (
-        <section className='mb-15 max-w-282.5 mx-auto flex space-x-12.5 item'>
+        <section className='mb-15 max-w-282.5 mx-auto flex flex-col md:flex-row space-y-5 md:space-x-12.5 md:item px-5'>
             <Image
                 src={'/images/home-page-about-image.jpg'}
                 width={479.837}

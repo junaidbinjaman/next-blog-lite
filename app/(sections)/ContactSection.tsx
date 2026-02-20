@@ -27,7 +27,7 @@ function ContactSection() {
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
     return (
-        <section className='max-w-282.5 mx-auto mt-12 mb-15 flex gap-12'>
+        <section className='max-w-282.5 mx-auto mt-12 mb-15 flex flex-col md:flex-row gap-12 p-5'>
             <div className='flex-1/2'>
                 <TypographyH2 className='text-primary'>
                     Get In Touch
@@ -95,6 +95,7 @@ function ContactSection() {
                             placeholder='How can we help'
                             {...register('subject', {required: true})}
                         />
+                        
                     </p>
                     <p className='leading-7'>
                         <Label htmlFor='message'>Message</Label>

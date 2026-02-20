@@ -13,12 +13,12 @@ function ServiceSection() {
                 <TypographyH2 className='text-center text-primary'>
                     What We Offer
                 </TypographyH2>
-                <TypographyH3 className='max-w-4/6 mx-auto text-[#4A5565]'>
+                <TypographyH3 className='md:max-w-4/6 mx-auto text-[#4A5565]'>
                     Discover the features that make LiteBlog your go-to
                     destination for quality reading and learning.
                 </TypographyH3>
             </div>
-            <div className='flex justify-between'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-56.25 md:w-130 lg:w-full mx-auto'>
                 <ServiceBox
                     icon={
                         <IoBookOutline size={23} className='text-stone-700' />

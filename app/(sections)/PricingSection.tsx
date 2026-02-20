@@ -31,7 +31,7 @@ function PricingSection() {
         'Priority support',
     ];
     return (
-        <section className='mb-12.5 max-w-250 mx-auto mt-20'>
+        <section className='mb-12.5 max-w-250 mx-auto mt-20 p-5'>
             <TypographyH2 className='text-primary text-center'>
                 Simple, Transparent Pricing
             </TypographyH2>
@@ -39,7 +39,7 @@ function PricingSection() {
                 Choose the plan that works best for you. All plans include a
                 14-day free trial.
             </TypographyP>
-            <div className='grid grid-cols-3 space-x-4 mt-11'>
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-5 mt-11'>
                 <PricingBox
                     price={0}
                     title='Free'

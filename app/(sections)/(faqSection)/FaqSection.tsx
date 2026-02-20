@@ -46,7 +46,7 @@ function FaqSection() {
         },
     ];
     return (
-        <section className='mb-15'>
+        <section className='mb-15 p-5'>
             <TypographyH2 className='text-center text-primary mt-20'>
                 Frequently Asked Questions
             </TypographyH2>
@@ -56,7 +56,7 @@ function FaqSection() {
             <Accordion
                 type='single'
                 collapsible
-                className='w-180 mx-auto mt-10'
+                className='max-w-180 mx-auto mt-10'
                 value={openItem}
                 onValueChange={setOpenItem}
             >

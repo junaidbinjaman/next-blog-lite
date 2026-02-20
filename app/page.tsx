@@ -12,6 +12,7 @@ import FaqSection from './(sections)/(faqSection)/FaqSection';
 import BrandSection from './(sections)/BrandSection';
 import InstagramFeedSection from './(sections)/InstagramFeedSection';
 import ContactSection from './(sections)/ContactSection';
+import NewsLetterSubscriptionBox from '../components/NewsLetterSubscriptionBox/NewsLetterSubscriptionBox';
 
 export default function Home() {
     return (
@@ -30,6 +31,9 @@ export default function Home() {
             <BrandSection />
             <InstagramFeedSection />
             <ContactSection />
+            <NewsLetterSubscriptionBox />
+            <div className='hidden'>
+            </div>
         </>
     );
 }

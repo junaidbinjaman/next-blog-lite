@@ -2,7 +2,7 @@ import {Skeleton} from '@/components/ui/skeleton';
 
 export default function WriterSkeleton({repeat = 1}: {repeat?: number}) {
     return (
-        <div className='grid grid-cols-4 gap-7.5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7.5'>
             {Array.from({length: repeat}, (_, index) => (
                 <div
                     key={index}

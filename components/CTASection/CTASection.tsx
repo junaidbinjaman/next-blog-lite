@@ -7,16 +7,16 @@ import Link from 'next/link';
 function CTASection() {
     return (
         <section className='mb-12.5'>
-            <div className='bg-[#1E2939] w-267.5 mx-auto p-16 rounded-lg flex flex-col gap-6 items-center justify-center'>
-                <TypographyH2 className='text-white'>
+            <div className='bg-[#1E2939] lg:w-267.5 lg:p-16 p-10 mx-auto rounded-lg flex flex-col gap-10 items-center justify-center'>
+                <TypographyH2 className='text-white text-center'>
                     Ready to Start Your Journey?
                 </TypographyH2>
-                <TypographyP className='w-2/3 text-center text-white'>
+                <TypographyP className='md:w-2/3 text-center text-white'>
                     Join our community of readers and writers. Get access to
                     exclusive content, engage with like-minded individuals, and
                     discover stories that inspire.
                 </TypographyP>
-                <div className='flex space-x-4 mx-auto w-fit'>
+                <div className='flex flex-col md:flex-row gap-5 items-center mx-auto w-fit'>
                     <Button className='px-9! h-15'>
                         Get Started Free
                         <svg

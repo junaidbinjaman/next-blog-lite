@@ -58,7 +58,7 @@ function BlogBox({
                 <div className='flex-1 flex flex-col gap-5 justify-center p-6'>
                     <div>
                         <Link href={href}>
-                            <TypographyH4 className='text-primary truncate w-101.25'>
+                            <TypographyH4 className='text-primary md:truncate md:w-70.25 lg:w-101.25'>
                                 {title}
                             </TypographyH4>
                         </Link>

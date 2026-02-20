@@ -1,6 +1,5 @@
 'use client';
 import CategoryBox, { CategoryBoxProps } from '@/components/categoryBox/CategoryBox';
-import Loader from '@/components/skeletons/BlogSkeleton';
 import CategorySkeleton from '@/components/skeletons/CategorySkeleton';
 import { Button } from '@/components/ui/button';
 import { TypographyH2 } from '@/components/ui/h2';
@@ -16,23 +15,23 @@ function CategorySection() {
     }
 
     return (
-        <section className="max-w-282.5 mx-auto mb-15 flex flex-col gap-10">
+        <section className="max-w-282.5 mx-auto mb-15 flex flex-col gap-10 p-5">
             <div className="flex flex-col items-center gap-2.5 text-text-color">
                 <TypographyH2 className="text-primary">
                     Explore Categories
                 </TypographyH2>
-                <TypographyP>
+                <TypographyP className='text-center'>
                     Browse through our diverse range of topics and find content
                     that interests you.
                 </TypographyP>
             </div>
 
             {isLoading ? (
-                <div className="flex justify-center">
+                <div>
                     <CategorySkeleton />
                 </div>
             ) : (
-                <div className="grid grid-cols-3 gap-6 mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
                     {data?.data.map((el: CategoryBoxProps) => (
                         <CategoryBox
                             key={el.title}
@@ -48,7 +47,7 @@ function CategorySection() {
                 </div>
             )}
 
-            <Button className='w-1/4 mx-auto active:scale-75'>
+            <Button className='md:w-1/4 mx-auto active:scale-75'>
                 <Link href='/categories'>Browse All Categories</Link>
             </Button>
         </section>

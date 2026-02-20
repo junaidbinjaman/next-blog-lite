@@ -7,7 +7,7 @@ import { MdShowChart } from 'react-icons/md'
 function FocusSection() {
   return (
     <section className='bg-black-color p-8 mb-15'>
-                <div className='flex items-center max-w-282.5 mx-auto justify-between'>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-4 items-center max-w-282.5 mx-auto'>
                     <div className='space-y-2'>
                         <FocusBox
                             icon={

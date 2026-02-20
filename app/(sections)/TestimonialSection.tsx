@@ -43,7 +43,7 @@ function TestimonialSection() {
     };
 
     return (
-        <section className='max-w-282.5 mx-auto mb-12.5 bg-[#f0f0f0] p-10 rounded-md'>
+        <section className='max-w-282.5 mx-auto mb-12.5 bg-[#f0f0f0] p-5 md:p-10 rounded-md'>
             <div className='mb-6'>
                 <TypographyH2 className='text-primary text-center'>
                     What Our Readers Say
@@ -66,7 +66,7 @@ function TestimonialSection() {
                 <Carousel setApi={setApi}>
                     <CarouselContent className='mb-5'>
                         {data.data.map((el: ReviewBoxProps, index: number) => (
-                            <CarouselItem key={index} className='basis-1/3'>
+                            <CarouselItem key={index} className='md:basis-1/2 lg:basis-1/3 px-2'>
                                 <ReviewBox
                                     star={el.star}
                                     description={el.description}
