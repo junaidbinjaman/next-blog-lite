@@ -1,18 +1,15 @@
-import { TypographyH1 } from '@/components/ui/h1'
-import { TypographyP } from '@/components/ui/paragraph'
-import React from 'react'
+import NewsLetterSubscriptionBox from '@/components/NewsLetterSubscriptionBox/NewsLetterSubscriptionBox';
+import BlogsSections from '@/components/sections/BlogsSections';
+import CategorySection from '@/components/sections/CategorySection';
 
 function page() {
-  return (
-    <div className='max-w-282.5 mx-auto'>
-        <TypographyH1>
-            Welcome to The Mind Blowing Article Page
-        </TypographyH1>
-        <TypographyP>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos obcaecati itaque expedita totam animi ut enim dolores alias doloremque ipsam?
-        </TypographyP>
-    </div>
-  )
+    return (
+        <>
+            <CategorySection />
+            <BlogsSections />
+            <NewsLetterSubscriptionBox />
+        </>
+    );
 }
 
-export default page
+export default page;

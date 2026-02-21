@@ -1,17 +1,17 @@
-import HeroSection from './(sections)/HeroSection';
-import FocusSection from './(sections)/FocusSection';
-import AboutSection from './(sections)/AboutSection';
-import ServiceSection from './(sections)/ServiceSection';
-import CategorySection from './(sections)/CategorySection';
-import BlogsSections from './(sections)/BlogsSections';
+import HeroSection from './_components/HeroSection';
+import FocusSection from '../components/sections/FocusSection';
+import AboutSection from '../components/sections/AboutSection';
+import ServiceSection from './_components/ServiceSection';
+import CategorySection from '../components/sections/CategorySection';
+import BlogsSections from '../components/sections/BlogsSections';
 import CTASection from '@/components/CTASection/CTASection';
-import WriterSection from '@/app/(sections)/WriterSection';
-import TestimonialSection from './(sections)/TestimonialSection';
-import PricingSection from './(sections)/PricingSection';
-import FaqSection from './(sections)/(faqSection)/FaqSection';
-import BrandSection from './(sections)/BrandSection';
-import InstagramFeedSection from './(sections)/InstagramFeedSection';
-import ContactSection from './(sections)/ContactSection';
+import WriterSection from '@/components/sections/WriterSection';
+import TestimonialSection from '../components/sections/TestimonialSection';
+import PricingSection from './_components/PricingSection';
+import FaqSection from './_components/_faqSection/FaqSection';
+import BrandSection from '../components/sections/BrandSection';
+import InstagramFeedSection from './_components/InstagramFeedSection';
+import ContactSection from './_components/ContactSection';
 import NewsLetterSubscriptionBox from '../components/NewsLetterSubscriptionBox/NewsLetterSubscriptionBox';
 
 export default function Home() {
@@ -32,8 +32,6 @@ export default function Home() {
             <InstagramFeedSection />
             <ContactSection />
             <NewsLetterSubscriptionBox />
-            <div className='hidden'>
-            </div>
         </>
     );
 }

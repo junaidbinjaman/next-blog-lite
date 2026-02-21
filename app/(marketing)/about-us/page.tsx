@@ -1,18 +1,23 @@
-import { TypographyH1 } from '@/components/ui/h1'
-import { TypographyP } from '@/components/ui/paragraph'
-import React from 'react'
+import AboutSection from '@/components/sections/AboutSection';
+import Hero from './_components/Hero';
+import FocusSection from '@/components/sections/FocusSection';
+import WriterSection from '@/components/sections/WriterSection';
+import TestimonialSection from '@/components/sections/TestimonialSection';
+import BrandSection from '@/components/sections/BrandSection';
+import NewsLetterSubscriptionBox from '@/components/NewsLetterSubscriptionBox/NewsLetterSubscriptionBox';
 
-function page() {
-  return (
-    <div className='max-w-282.5 mx-auto'>
-        <TypographyH1>
-            Welcome to About Us Page
-        </TypographyH1>
-        <TypographyP>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos obcaecati itaque expedita totam animi ut enim dolores alias doloremque ipsam?
-        </TypographyP>
-    </div>
-  )
+function AboutUsPage() {
+    return (
+        <>
+            <Hero />
+            <FocusSection />
+            <AboutSection />
+            <TestimonialSection />
+            <WriterSection />
+            <BrandSection />
+            <NewsLetterSubscriptionBox />
+        </>
+    );
 }
 
-export default page
+export default AboutUsPage;

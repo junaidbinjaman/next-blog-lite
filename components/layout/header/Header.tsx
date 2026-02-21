@@ -3,6 +3,7 @@ import Link from 'next/link';
 import MobileNav from './MobileNav';
 import { TypographyH3 } from '@/components/ui/h3';
 import SocialMediaIcons from '@/components/socialMediaIcons/SocialMediaIcons';
+import Image from 'next/image';
 
 function Header() {
     const nav = [
@@ -31,9 +32,15 @@ function Header() {
         <div>
             <div className='flex justify-between max-w-282.5 mx-auto items-center py-2.5 md:px-5 px-2.5'>
                 <Link href='/'>
-                    <TypographyH3 className='text-primary font-inter'>
-                        NextBlog Lite
-                    </TypographyH3>
+                    
+                        <Image
+                            src='/images/site-logo.png'
+                            alt='logo'
+                            width={130}
+                            height={50}
+                            className='inline-block mr-2'
+                        />
+
                 </Link>
                 <Navbar navItems={nav} className='hidden lg:block' />
                 <div className='md:flex space-x-15'>
