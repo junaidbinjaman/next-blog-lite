@@ -10,8 +10,8 @@ import TestimonialSection from '../components/sections/TestimonialSection';
 import PricingSection from './_components/PricingSection';
 import FaqSection from './_components/_faqSection/FaqSection';
 import BrandSection from '../components/sections/BrandSection';
-import InstagramFeedSection from './_components/InstagramFeedSection';
-import ContactSection from './_components/ContactSection';
+import InstagramFeedSection from '../components/sections/InstagramFeedSection';
+import ContactSection from '../components/sections/ContactSection';
 import NewsLetterSubscriptionBox from '../components/NewsLetterSubscriptionBox/NewsLetterSubscriptionBox';
 
 export default function Home() {

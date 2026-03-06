@@ -1,18 +1,18 @@
-import { TypographyH1 } from '@/components/ui/h1'
-import { TypographyP } from '@/components/ui/paragraph'
-import React from 'react'
+import Hero from './_components/Hero'
+import InstagramFeedSection from '@/components/sections/InstagramFeedSection'
+import ContactSection from '@/components/sections/ContactSection'
+import MapSection from './_components/MapSection'
 
-function page() {
+function ContactPage() {
+
   return (
-    <div className='max-w-282.5 mx-auto'>
-        <TypographyH1>
-            Welcome to Contact Us Page
-        </TypographyH1>
-        <TypographyP>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos obcaecati itaque expedita totam animi ut enim dolores alias doloremque ipsam?
-        </TypographyP>
+    <div className='min-h-screen flex flex-col'>
+      <Hero />
+      <InstagramFeedSection />
+      <ContactSection />
+      <MapSection />
     </div>
   )
 }
 
-export default page
+export default ContactPage
